@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<div class="panel panel-primary">
+    <div class="panel-heading">Encuestas disponibles</div>
+    <div class="panel-body">
+        {{#each polls}}
+            <div class="b-poll">
+                <div class="col-xs-12">
+                    <div class="b-question">
+                        <a href="/encuestas/detalle/{{id}}">
+                            <strong>{{ question.label }}</strong>
+                        </a>
+
+                        <ul>
+                            {{#each answers}}
+                                <li>
+                                    {{label}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
